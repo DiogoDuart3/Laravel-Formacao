@@ -57,7 +57,7 @@ Apagar permanentemente:
 	‘Form’=>Collective\Html\FormFacade::class,
 	‘Html’=>Collective\Html\HtmlFacade::class
     
-### Exemplo:
+#### Exemplo:
 
         {!! Form::model($post,['method'=>'PATCH','action'=>['PostController@update',$post->id]]) !!}
         <div class="form-group">
