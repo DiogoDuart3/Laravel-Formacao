@@ -56,6 +56,19 @@ Apagar permanentemente:
 
 	‘Form’=>Collective\Html\FormFacade::class,
 	‘Html’=>Collective\Html\HtmlFacade::class
+    
+### Exemplo:
+
+        {!! Form::model($post,['method'=>'PATCH','action'=>['PostController@update',$post->id]]) !!}
+        <div class="form-group">
+            {!! Form::text('title', null, ['class' => 'form-control']) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::textArea('body', null, ['class' => 'form-control']) !!}
+        </div>
+        @include('layouts.errors')
+        {!! Form::submit('edit', ['class' => 'btn btn-sm btn-success']) !!}
+        {!! Form::close() !!}
 
 ## Request
 
