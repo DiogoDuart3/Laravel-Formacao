@@ -39,5 +39,7 @@ Apagar permanentemente:
 
 
 --CASCADING DELETE
+
     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+    
 								                                        'restrict' 
