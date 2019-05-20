@@ -7,6 +7,7 @@ use App\Photo;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -39,19 +40,36 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    function posts(){
+    function posts()
+    {
         return $this->hasMany(Post::class);
     }
 
-    function pen(){
+    function getPostsQuantityAttribute()
+    {
+        if ($this->posts())
+            return count($this->posts);
+        else
+            return 0;
+    }
+
+    function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = Hash::make($password);
+    }
+
+    function pen()
+    {
         return $this::hasOne(Pen::class, 'user_id');
     }
 
-    function roles(){
+    function roles()
+    {
         return $this::belongsToMany(Role::class);
     }
 
-    function photos(){
+    function photos()
+    {
         return $this->morphMany(Photo::class, 'imageable');
     }
 }

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 class PostController extends Controller
 {
     function index(){
-        $posts = Post::withTrashed()->get();
+        $posts = Post::desc();
         return view('admin.posts.index', compact('posts'));
     }
 
