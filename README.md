@@ -1,7 +1,9 @@
 # Laravel-Formacao
 ## SoftDeletes
 No model Post:
+<br>
 	Importar SoftDeletes;(fora da classe)
+    
 	Use SoftDeletes;(na class)
 	protected $dates=['deleted_at'];(na class11:18 13/05/2019)
 Criar migration para acrescentar coluna 'deleted_at'
