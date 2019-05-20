@@ -43,3 +43,24 @@ Apagar permanentemente:
     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
     
 								                                        'restrict' 
+
+##Forms
+
+•Collective Forms: Package para construção de Formulários
+
+	composer require laravelcollective/html
+    
+•adicionar o provider no ficheiro config/app.php
+
+•criar aliases no mesmo ficheiro:
+
+	‘Form’=>Collective\Html\FormFacade::class,
+	‘Html’=>Collective\Html\HtmlFacade::class
+
+##Request
+
+    php artisan make:request
+
+meter ‘authorize’ a true e copiar as rules que estavam no controller;
+
+No ‘PostController’, metodo store, injetar argumento a clasee criada (em vez de Request)
