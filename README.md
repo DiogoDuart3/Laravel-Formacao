@@ -44,7 +44,7 @@ Apagar permanentemente:
     
 								                                        'restrict' 
 
-##Forms
+## Forms
 
 •Collective Forms: Package para construção de Formulários
 
@@ -57,7 +57,7 @@ Apagar permanentemente:
 	‘Form’=>Collective\Html\FormFacade::class,
 	‘Html’=>Collective\Html\HtmlFacade::class
 
-##Request
+## Request
 
     php artisan make:request
 
