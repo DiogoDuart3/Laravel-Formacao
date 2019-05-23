@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Session;
 
 class PostController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('posts', ['only' => ['index', 'create']]);
+//        $this->middleware('log');
+    }
+
     function index(){
         $posts = Post::desc();
         return view('admin.posts.index', compact('posts'));

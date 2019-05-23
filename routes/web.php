@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('age');
 
 Route::get('/admin/user/{id}/pen', function($id){
     $user = User::findOrFail($id);
