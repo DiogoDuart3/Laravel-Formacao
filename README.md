@@ -77,3 +77,22 @@ Apagar permanentemente:
 meter ‘authorize’ a true e copiar as rules que estavam no controller;
 
 No ‘PostController’, metodo store, injetar argumento a clasee criada (em vez de Request)
+
+# Middleware
+
+## Função terminate
+
+• Permite executar código depois da resposta ser enviada
+
+    class StartSession
+    {
+        public function handle($request, Closure $next)
+        {
+            return $next($request);
+        }
+
+        public function terminate($request, $response)
+        {
+            // Store the session data...
+        }
+    }
