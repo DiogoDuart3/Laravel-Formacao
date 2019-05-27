@@ -56,8 +56,8 @@ Apagar permanentemente:
 
 •criar aliases no mesmo ficheiro:
 
-	‘Form’=>Collective\Html\FormFacade::class,
-	‘Html’=>Collective\Html\HtmlFacade::class
+	'Form'=>Collective\Html\FormFacade::class,
+	'Html'=>Collective\Html\HtmlFacade::class
     
 #### Exemplo:
 
