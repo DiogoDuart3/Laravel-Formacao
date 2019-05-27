@@ -52,7 +52,7 @@ Apagar permanentemente:
     
 •adicionar o provider no ficheiro config/app.php
 
-    \Collective\Html\FormFacade::class
+    \Collective\Html\HtmlServiceProvider::class
 
 •criar aliases no mesmo ficheiro:
 
