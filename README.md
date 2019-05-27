@@ -52,6 +52,8 @@ Apagar permanentemente:
     
 •adicionar o provider no ficheiro config/app.php
 
+    \Collective\Html\FormFacade::class
+
 •criar aliases no mesmo ficheiro:
 
 	‘Form’=>Collective\Html\FormFacade::class,
