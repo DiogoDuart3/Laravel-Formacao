@@ -96,3 +96,11 @@ No ‘PostController’, metodo store, injetar argumento a clasee criada (em vez
             // Store the session data...
         }
     }
+
+# Auth
+
+    php artisan make:auth
+
+• Saber  utilizador atual:
+
+    Auth::user()
