@@ -114,3 +114,5 @@ No ‘PostController’, metodo store, injetar argumento a clasee criada (em vez
     RouteServiceProvider.php
     routes/api.php
     config/auth.php
+
+    https://laravel.com/docs/5.8/api-authentication
