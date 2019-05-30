@@ -106,3 +106,11 @@ No ‘PostController’, metodo store, injetar argumento a clasee criada (em vez
 • Saber  utilizador atual:
 
     Auth::user()
+
+# API
+
+• Ficheiros:
+    
+    RouteServiceProvider.php
+    routes/api.php
+    config/auth.php
